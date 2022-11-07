@@ -1,0 +1,113 @@
+/* GENERAL */
+.required { color: #CF4436; }
+.right { float:right; }
+
+/* BUTTONS */
+
+.btn-submit  {
+  background-color: rgba(39,173,96,1)!important;
+  color:white!important;
+  border-radius: 3px;
+  border: 0px;
+  width: 100%;
+  margin-top: 20px;
+}
+.btn-submit:hover {
+  background-color: rgba(39,173,96,1)!important;
+}
+.btn-white {
+  background-color: white!important;
+  color: rgba(39,173,96,1)!important;
+  margin-top: 20px;
+  font-weight: normal;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.btn-white:hover {
+  background-color: white!important;
+}
+
+.page-title {
+  background:url('https://media.discordapp.net/attachments/951292046797332573/1037951305592877067/a-small-group-of-people-harvesting-autumn-vegetables-in-the-fields-on-a-small-family-farm-MINF02021.jpeg');
+  background-size: cover;
+}
+.page-title-filter {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: rgba(39,173,96,.9);
+  text-align: center;
+}
+.page-title h1 {
+  color:white;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.content {
+  background-color: white;
+  padding: 25px;
+  border-radius: 3px;
+  margin-top: 25px;
+}
+.content h3 {
+  padding: 9px;
+  color:black;
+  font-weight: bold;
+  margin: 0px;
+  font-size: 15px;
+}
+.content-p {
+  padding: 7px;
+  color:black;
+  margin: 0px;
+  font-size: 15px;
+}
+.content .form-control {
+  border: 0px;
+  background-color: rgba(0,0,0,.07);
+}
+.content .title {
+  color:black;
+  font-weight: bold;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+.content .sub-title {
+  color:black;
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 15px;
+}
+.content .hr {
+  border-top: #c2c2c2 1px solid;
+  margin-top: 30px;
+}
+.content hr {
+  text-align: left;
+  width: 15%;
+  padding: 0px;
+  background-color: rgba(39,173,96,1);
+  opacity: 1;
+  border: 3px solid rgba(39,173,96,1)!important;
+  border-radius: 3px;
+}
+.content label {
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+
+/* FOOTER */
+footer {
+  background-color: #212121;
+  padding: 20px;
+  margin-top: 20px;
+}
+footer p {
+  color:rgba(255,255,255,.6);
+  font-size: 15px;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+}

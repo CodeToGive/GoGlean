@@ -1,0 +1,119 @@
+/**
+*
+*   PHONE
+*
+*/
+
+@media (max-width: 640px) {
+ * {
+   box-sizing: border-box;
+ }
+
+ /* passer body (et tous les Ã©lÃ©ments de largeur fixe) en largeur automatique */
+
+ body {
+   width: auto;
+   margin: 0;
+   padding: 0;
+ }
+
+ /* fixer une largeur maximale de 100% aux Ã©lÃ©ments potentiellement problÃ©matiques */
+
+ img,
+ table,
+ td,
+ blockquote,
+ code,
+ pre,
+ textarea,
+ input,
+ iframe,
+ object,
+ embed,
+ video {
+   max-width: 100%;
+ }
+
+ /* conserver le ratio des images */
+
+ img {
+   height: auto;
+ }
+
+ /* gestion des mots longs */
+
+ textarea,
+ table,
+ td,
+ th,
+ code,
+ pre,
+ samp {
+   -webkit-hyphens: auto; /* cÃ©sure propre */
+   -moz-hyphens: auto;
+   hyphens: auto;
+   word-wrap: break-word; /* passage Ã  la ligne forcÃ© */
+ }
+
+ code,
+ pre,
+ samp {
+   white-space: pre-wrap; /* passage Ã  la ligne spÃ©cifique pour les Ã©lÃ©ments Ã  chÃ¢sse fixe */
+ }
+
+ /* Passer Ã  une seule colonne (Ã  appliquer aux Ã©lÃ©ments multi-colonnes) */
+
+ .element1,
+ .element2 {
+   float: none;
+   width: auto;
+ }
+
+ /* masquer les Ã©lÃ©ments superflus */
+
+  .phone-hide{
+    display: none;
+  }
+  .phone-large{
+    width: 100%!important;
+  }
+  .phone-left{
+    float: left!important;
+  }
+  .phone-center{
+    text-align: center!important;
+  }
+  .phone-justify{
+    text-align: justify;
+  }
+  .phone-large {
+    width:100%;
+  }
+
+  iframe {
+    height:170px!important;
+  }
+
+  .container-phone {
+    padding: 10px;
+  }
+
+
+
+}
+
+@media (max-device-width:768px) and (orientation: landscape) {
+  html {
+   -webkit-text-size-adjust: 100%;
+   -ms-text-size-adjust: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .computer-right{
+    float: right!important;
+  }
+  .computer-hide{
+    display: none;
+  }
+}

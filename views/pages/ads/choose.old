@@ -1,0 +1,130 @@
+<div class="list-gleaning">
+<div id="titleHeader">
+     <div class="filter">
+         <div>
+
+         <h2 id="findOp">
+         <b>Find Gleaning opportunities</b>
+         </h2>
+         </div>
+     </div>
+ </div>
+ <div>
+     <br>
+     <div class="container">
+       <div class="content">
+         <h3 class="selectText">Select an opportunity:</h3>
+         <table id="ads" class="table">
+             <tr>
+                 <th>Farmer's name</th>
+                 <th>Adress</th>
+                 <th>Required group size</th>
+                 <th>Product type</th>
+                 <th>Date and time</th>
+                 <th>Urgency</th>
+                 <th>Action</th>
+             </tr>
+
+             <?php
+              while($c = $choose->fetch()) {
+
+                $req = $db->prepare("SELECT * FROM users WHERE id = ?");
+                $req->execute(array($c["user_id"]));
+                $farmer = $req->fetch();
+
+                $req = $db->prepare("SELECT COUNT(*) AS nb FROM applications WHERE group_id = ? AND ads_id = ?");
+                $req->execute(array($_SESSION["id"], intval($c["id"])));
+                $req = $req->fetch();
+
+                if ($req["nb"] < 1) {
+
+               ?>
+               <tr>
+                   <td>
+                     <?= $farmer["name"]; ?>
+                   </td>
+                   <td><?= json_decode($farmer["address"])->street; ?>, <?= json_decode($farmer["address"])->city ?></td>
+                   <td><?= $c["minimum"] ?> minimum</td>
+                   <td><?= $c["harvest"] ?></td>
+                   <td><?= $c["begin_date"] ?></td>
+                   <td>
+                     <b>
+                       <?php
+                        switch ($c["urgent"]) {
+                          case 0:
+                            echo "Normal";
+                            break;
+                          case 1:
+                            echo "Urgent";
+                            break;
+                          case 2:
+                            echo "Very urgent";
+                            break;
+                          default:
+                            echo "Normal";
+                            break;
+                        }
+                       ?>
+                     </b>
+                   </td>
+                   <td>
+                     <form method="post">
+                       <input type="hidden" name="id" value="<?= $c['id'] ?>">
+                       <input type="submit" name="sendChoose" value="Apply to this opportunity" class="request">
+                     </form>
+                   </td>
+               </tr>
+             <?php
+            }
+           } ?>
+
+
+         </table>
+       </div>
+     </div>
+ </div>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+ <!-- Modal content -->
+ <div class="modal-content">
+   <span class="close">&times;</span>
+   <p>Thank you for showing interest in this event!<br> A confirmation
+     email will be sent as soon as the farmer has accepted your event.
+   </p>
+ </div>
+
+</div>
+
+</div>
+<script>
+ // Get the modal
+ var modal = document.getElementById("myModal");
+
+ // Get the button that opens the modal
+ var btns = document.getElementsByClassName("request");
+ for (var i = 0; i < btns.length; i++) {
+     btns[i].onclick = function() {
+     modal.style.display = "block";
+     }
+ }
+
+ // Get the <span> element that closes the modal
+ var span = document.getElementsByClassName("close")
+ span[0].addEventListener('click',function(){
+ modal.style.display = "none";
+ });
+
+ // When the user clicks the button, open the modal
+ btn.onclick = function() {
+   modal.style.display = "block";
+ }
+
+ // When the user clicks anywhere outside of the modal, close it
+ window.onclick = function(event) {
+   if (event.target == modal) {
+     modal.style.display = "none";
+   }
+ }
+ </script>
+ </div>
