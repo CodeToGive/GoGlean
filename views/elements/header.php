@@ -8,6 +8,7 @@
 
       <div class="col-lg-5">
         <div class="right nav-links">
+          <a href="/?page=analytics">Analytics</a>
           <a href="/?page=community">Community</a>
         </div>
       </div>

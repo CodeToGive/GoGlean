@@ -214,7 +214,7 @@
                 ?>
               </td>
               <td><?= $a["begin_date"] ?></td>
-              <td><?= json_decode($farmer["address"])->city; ?></td>
+              <td><span class="color"><?= json_decode($farmer["address"])->city; ?></span></td>
               <td><?= $a["harvest"]; ?></td>
               <td>
                 <form method="post">

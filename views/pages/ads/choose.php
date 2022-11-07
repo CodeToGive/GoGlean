@@ -59,8 +59,20 @@
                 </span>
              </h4>
 
-             <div class="sub-content">
-               Harvest : <i><?= $c["harvest"] ?></i>
+             <div class="row">
+               <div class="col-lg-8">
+                 <div class="sub-content" style="color:black;">
+                   Harvest : <i><?= $c["harvest"] ?></i>
+                 </div>
+               </div>
+               <div class="col-lg-4">
+                  <div class="sub-content" style="padding-left:0px;padding-right:0px;background:#fff;text-align:right;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12.5" height="12.5" fill="currentColor" class="bi bi-calendar-event-fill" viewBox="0 0 16 16">
+                     <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2zm-3.5-7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/>
+                   </svg>
+                     <?= explode(" ", $c["begin_date"])[0] ?>
+                  </div>
+               </div>
              </div>
 
              <div class="row">

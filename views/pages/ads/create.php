@@ -32,8 +32,8 @@
 
     <div class="row">
       <div class="col-lg-6">
-        <label for="quantity">Capacity <i style="font-weight:normal;">(people required)</i> <span class="required">*</span></label>
-        <input type="number" name="quantity" placeholder="0" class="form-control">
+        <label for="minimum">Capacity <i style="font-weight:normal;">(people required)</i> <span class="required">*</span></label>
+        <input type="number" name="minimum" placeholder="0" class="form-control">
       </div>
       <div class="col-lg-6">
         <label for="urgent">Urgency <span class="required">*</span></label>
@@ -45,8 +45,16 @@
       </div>
     </div>
 
-    <label for="harvest">Type of product <i style="font-weight:normal;">(separate by a coma)</i> <span class="required">*</span></label>
-    <input type="text" name="harvest" placeholder="potato, apple, tomato" class="form-control">
+    <div class="row">
+      <div class="col-lg-9">
+        <label for="harvest">Type of product <i style="font-weight:normal;">(separate by a coma)</i> <span class="required">*</span></label>
+        <input type="text" name="harvest" placeholder="potato, apple, tomato" class="form-control">
+      </div>
+      <div class="col-lg-3">
+        <label for="harvest">Quantity estimation</label>
+        <input type="number" name="quantity" placeholder="0" class="form-control">
+      </div>
+    </div>
 
     <div class="row">
       <div class="col-lg-9">

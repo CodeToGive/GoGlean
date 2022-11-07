@@ -7,18 +7,20 @@ if (!empty($_POST["sendAdd"])) {
 
           $date_end = htmlspecialchars($_POST["date_end"]);
           $date_begin = htmlspecialchars($_POST["date_begin"]);
-          $quantity = htmlspecialchars($_POST["quantity"]);
+          $minimum = htmlspecialchars($_POST["minimum"]);
           $harvest = htmlspecialchars($_POST["harvest"]);
           $urgent = htmlspecialchars($_POST["urgent"]);
+          $quantity = htmlspecialchars($_POST["quantity"]);
 
-          $req = $db->prepare("INSERT INTO advertisements (user_id, begin_date, end_date, minimum, harvest, urgent) VALUES (?, ?, ?, ?, ?, ?)");
+          $req = $db->prepare("INSERT INTO advertisements (user_id, begin_date, end_date, minimum, harvest, urgent, quantity) VALUES (?, ?, ?, ?, ?, ?, ?)");
           $req->execute(array(
             $_SESSION["id"],
             $date_begin,
             $date_end,
-            $quantity,
+            $minimum,
             $harvest,
-            $urgent
+            $urgent,
+            $quantity
           ));
 
           header("Location: /?page=profile");
