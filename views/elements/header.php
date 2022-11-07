@@ -17,8 +17,8 @@
             <a href="/?page=logout">Logout</a>
             <a href="/?page=profile" class="btn-register">Profile</a>
           <?php } else { ?>
-            <a href="/?page=login">Connexion</a>
-            <a href="/?page=register" class="btn-register">Inscription</a>
+            <a href="/?page=login">Log in</a>
+            <a href="/?page=register" class="btn-register">Sign up</a>
           <?php } ?>
         </div>
       </div>

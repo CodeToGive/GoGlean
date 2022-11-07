@@ -1,10 +1,9 @@
-<div class="page-title">
-  <div class="page-title-filter">
-    <h1>Registration</h1>
-  </div>
-</div>
-
-<div class="container">
+<div id="titleHeader">
+     <div class="filter">
+       <h2 id="findOp" style="font-weight:bold;">Sign up</h2>
+     </div>
+ </div>
+<div class="container" style="margin-top:-50px;">
   <div class="row justify-content-md-center">
     <div class="col-lg-6">
       <div class="content">
@@ -23,7 +22,7 @@
           <label for="password">Password <span class="required">*</span></label>
           <input type="password" name="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;" class="form-control">
 
-          <label for="password_again">Repeat password <span class="required">*</span></label>
+          <label for="password_again">Confirm password <span class="required">*</span></label>
           <input type="password" name="password_again" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;" class="form-control">
 
       </div>

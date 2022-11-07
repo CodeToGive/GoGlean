@@ -51,7 +51,7 @@
 
        </div>
        <div class="col-lg-3">
-          <a href="https://earthday.ca/wp-content/uploads/sites/2/2022/10/Directory_Gleaning_Earth-Day-Canada.pdf" target="_blank" class="btn btn-register">See More Group</a>
+          <a href="https://earthday.ca/wp-content/uploads/sites/2/2022/10/Directory_Gleaning_Earth-Day-Canada.pdf" target="_blank" class="btn btn-register">See More Groups</a>
        </div>
      </div>
 

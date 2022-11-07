@@ -58,7 +58,7 @@
           <h3>See my next gleanings</h3>
         </div>
         <div class="col-lg-3">
-          <a href="/?page=ads_choose" class="btn btn-submit" style="margin-top:0px;">Choisir un gleaning</a>
+          <a href="/?page=ads_choose" class="btn btn-submit" style="margin-top:0px;">Apply for gleaning</a>
         </div>
       </div>
       <?php
@@ -70,6 +70,7 @@
         <thead style="font-weight:bold;">
           <td>#</td>
           <td>Farm</td>
+          <td>Adress</td>
           <td>Date</td>
           <td>State</td>
         </thead>
@@ -92,16 +93,22 @@
             <td>
               <?php
 
+                echo json_decode($req["address"])->city;
+              ?>
+            </td>
+            <td>
+              <?php
+
                 echo $reqId["begin_date"];
               ?>
             </td>
             <td><?php
               switch ($l["state"]) {
                 case 0:
-                  echo "Waiting";
+                  echo "Pending";
                   break;
                 case 1:
-                  echo "Accept";
+                  echo "Accepted";
                   break;
                 case 2:
                   echo "Done";
@@ -126,7 +133,7 @@
           <h3>My announces</h3>
         </div>
         <div class="col-lg-3">
-          <a href="/?page=ads_create" class="btn btn-submit" style="margin-top:0px;">Add announce</a>
+          <a href="/?page=ads_create" class="btn btn-submit" style="margin-top:0px;">Create gleaning opportunity</a>
         </div>
       </div>
       <table class="table" style="margin-top:20px;">
@@ -159,7 +166,7 @@
               ?>
             </td>
             <td>bank</td>
-            <td><a href="/?page=ads_watch&id=<?= $a['id'] ?>">Voir</a></td>
+            <td><a href="/?page=ads_watch&id=<?= $a['id'] ?>" class="color">Check requests</a></td>
           </tr>
         <?php } ?>
       </table>
@@ -182,6 +189,7 @@
           <td>Gleaner Group</td>
           <td>Date</td>
           <td>Location</td>
+          <td>Product</td>
           <td>Action</td>
         </thead>
           <?php
@@ -207,6 +215,7 @@
               </td>
               <td><?= $a["begin_date"] ?></td>
               <td><?= json_decode($farmer["address"])->city; ?></td>
+              <td><?= $a["harvest"]; ?></td>
               <td>
                 <form method="post">
                   <input type="hidden" name="id" value="<?= $a["id"] ?>">

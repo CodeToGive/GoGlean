@@ -63,7 +63,7 @@
                           $message = "Password are not equal.";
                         }
                       } else {
-                        $message = "Please fill all inputs.";
+                        $message = "Please fill in all inputs.";
                       }
                     } else {
                       $message = "Please fill all inputs.";
@@ -90,6 +90,6 @@
         $message = "Please fill all inputs.";
       }
     } else {
-      $message = "Please fill all inputs.";
+      $message = "Please fill in all inputs.";
     }
   }

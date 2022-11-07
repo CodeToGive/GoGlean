@@ -1,10 +1,10 @@
-<div class="page-title">
-  <div class="page-title-filter">
-    <h1>Welcome back !</h1>
-  </div>
-</div>
+<div id="titleHeader">
+     <div class="filter">
+       <h2 id="findOp" style="font-weight:bold;">Welcome back !</h2>
+     </div>
+ </div>
 
-<div class="container">
+<div class="container" style="margin-top:-50px;">
   <div class="row justify-content-md-center">
     <div class="col-lg-6">
       <div class="content">
